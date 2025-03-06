@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+/* --------------- Theme Settings --------------- */
 @theme {
   --color-background: #ffffff;
   --color-foreground: #272822;
@@ -24,6 +25,7 @@
   --font-mono: var(--font-mono), Consolas, "Liberation Mono", Menlo, monospace;
 }
 
+/* Dark Mode Override */
 @media (prefers-color-scheme: dark) {
   @theme {
     --color-background: #272822;
@@ -31,11 +33,15 @@
   }
 }
 
+/* --------------- Global Styles --------------- */
 body {
   color: var(--color-foreground);
   background: var(--color-background);
   font-family: var(--font-sans);
+  overflow-x: hidden;
 }
+
+/* About Gradient */
 .about-gradient {
   background: rgb(255, 255, 255);
   background: linear-gradient(
@@ -44,54 +50,79 @@ body {
   );
 }
 
-@layer utilities {
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+/* --------------- Keyframes & Animations --------------- */
+@keyframes moveUp {
+  from {
+    transform: translateY(50vh); /* Start from 50vh below */
   }
-
-  .animate-fadeIn {
-    animation: fadeIn 0.6s ease-out forwards;
+  to {
+    transform: translateY(0); /* Move to its final position */
   }
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-moveUp {
+  animation: moveUp 0.8s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    --g5-1-x-position: 5%;
+    --g5-1-y-position: 5%;
+  }
+  50% {
+    --g5-1-x-position: 85%;
+    --g5-1-y-position: 85%;
+  }
+  100% {
+    --g5-1-x-position: 15%;
+    --g5-1-y-position: 35%;
+  }
+}
+
+/* --------------- Utilities --------------- */
 @layer utilities {
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
-  @keyframes slideInLeft {
-    from {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-
-  @keyframes slideInRight {
-    from {
-      transform: translateX(100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-
   .animate-fadeIn {
     animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  .animate-fadeIn-slow {
+    animation: fadeIn 0.8s ease-out forwards;
+    animation-delay: 0.2s;
   }
 
   .animate-slideInLeft {
@@ -101,76 +132,37 @@ body {
   .animate-slideInRight {
     animation: slideInRight 0.8s ease-out forwards;
   }
+
+  .animated {
+    will-change: opacity, transform; /* Optimize for animations */
+  }
+
+  .animated-gradient {
+    background:
+      radial-gradient(
+        100% 100% at var(--g5-1-x-position) var(--g5-1-y-position),
+        var(--color-lightgray) -52%,
+        transparent
+      ),
+      var(--color-darkgray);
+    animation: gradientShift 10s ease-in-out infinite alternate;
+  }
 }
 
-.animated-gradient {
-  background:
-    radial-gradient(
-      100% 100% at var(--g5-1-x-position) var(--g5-1-y-position),
-      #fbff00 -52%,
-      transparent
-    ),
-    radial-gradient(
-      100% 100% at var(--g5-2-x-position) var(--g5-2-y-position),
-      #95e916 0%,
-      transparent
-    ),
-    radial-gradient(
-      100% 100% at var(--g5-3-x-position) var(--g5-3-y-position),
-      #28f0cf 0%,
-      transparent
-    ),
-    #ffffff;
-  animation-name: g-5;
-  animation-iteration-count: infinite;
-  animation-duration: 6s;
-  transition-timing-function: ease-in;
-}
+/* --------------- Custom Properties for Animation --------------- */
 @property --g5-1-x-position {
   syntax: "<percentage>";
   inherits: false;
-  initial-value: 1.0937500000000024%;
+  initial-value: 5%;
 }
+
 @property --g5-1-y-position {
   syntax: "<percentage>";
   inherits: false;
-  initial-value: 0%;
+  initial-value: 5%;
 }
-@property --g5-2-x-position {
-  syntax: "<percentage>";
-  inherits: false;
-  initial-value: 15.312500000000002%;
-}
-@property --g5-2-y-position {
-  syntax: "<percentage>";
-  inherits: false;
-  initial-value: 85.46875%;
-}
-@property --g5-3-x-position {
-  syntax: "<percentage>";
-  inherits: false;
-  initial-value: 97.1875%;
-}
-@property --g5-3-y-position {
-  syntax: "<percentage>";
-  inherits: false;
-  initial-value: 48.515625%;
-}
+
 :root {
-  --g5-1-x-position: 1.0937500000000024%;
-  --g5-1-y-position: 0%;
-  --g5-2-x-position: 15.312500000000002%;
-  --g5-2-y-position: 85.46875%;
-  --g5-3-x-position: 97.1875%;
-  --g5-3-y-position: 48.515625%;
-}
-@keyframes g-5 {
-  50% {
-    --g5-1-x-position: 99.0234375%;
-    --g5-1-y-position: 99.0234375%;
-    --g5-2-x-position: 84.1796875%;
-    --g5-2-y-position: 13.671875%;
-    --g5-3-x-position: 2.8906249999999996%;
-    --g5-3-y-position: 46.1328125%;
-  }
+  --g5-1-x-position: 5%;
+  --g5-1-y-position: 5%;
 }

@@ -1,24 +1,31 @@
 import { ContentBlock } from "@/components/ContentBlock";
 import { Container } from "@/components/Container";
-import { websitesData } from "@/data/websitesData";
+import { Headline } from "@/components/Headline";
+import { websitesData, sprinklrWebsitesData } from "@/data/websitesData";
 
 export function Websites() {
   return (
-    <section className="h-full w-full bg-white py-4">
+    <section className="h-full w-full bg-white py-16">
       <Container>
-        <div className="mb-8">
-          <div className="mb-8 flex items-center gap-4">
-            <div className="border-darkgray flex-grow border-t"></div>
-            <h2 className="text-darkgray text-4xl">Lead Software Engineer</h2>
-            <div className="border-darkgray flex-grow border-t"></div>
-          </div>
-
-          <h3 className="text-darkgray mb-12 text-center text-xl">
-            At Avalore Agency, I led the development of greenfield projects and
-            the maintenance of legacy codebases. Selected works below.
-          </h3>
-        </div>
+        <Headline
+          title="Lead Software Engineer"
+          subtitle="At Avalore Agency, I led the development of greenfield projects and the maintenance of legacy codebases."
+        />
         {websitesData.map((website) => (
+          <ContentBlock
+            key={website?.title}
+            image={website?.image}
+            title={website?.title}
+            description={website?.description}
+            reverse={website?.reverse}
+            url={website?.url}
+          />
+        ))}
+        <Headline
+          title="Software Engineer"
+          subtitle="At Sprinklr, I was part of a team of 5 developers working on a large-scale React application."
+        />
+        {sprinklrWebsitesData.map((website) => (
           <ContentBlock
             key={website?.title}
             image={website?.image}

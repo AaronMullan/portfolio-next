@@ -36,3 +36,35 @@ export const websitesData = [
     reverse: true,
   },
 ];
+export const sprinklrWebsitesData = [
+  {
+    title: "sprinklr.com",
+    description: (
+      <div className="flex flex-col justify-between">
+        <p className="mb-4">
+          <strong className="text-red">Problem:</strong> Sprinklr, a leading
+          enterprise software company, needed to enhance its Gatsby-powered
+          marketing website with new features and multilingual support to better
+          serve its global audience.
+        </p>
+        <p className="mb-4">
+          <strong className="text-blue">Solution:</strong> As part of the
+          development team, I helped expand the site's capabilities by building
+          a blog, a news page, and new components, all integrated with the
+          Contentful CMS. We implemented i18next for seamless multilingual
+          translations and integrated HubSpot forms to optimize lead capture.
+        </p>
+        <p className="mb-4">
+          <strong className="text-green">Result:</strong> Collaborating closely
+          with the design and marketing technology teams, we successfully
+          delivered a more dynamic and accessible website. Our improvements
+          boosted Ahrefs and Google PageSpeed scores significantly while
+          increasing sales leads.
+        </p>
+      </div>
+    ),
+    image: "/sprinklr.png",
+    url: "https://sprinklr.com",
+    reverse: false,
+  },
+];

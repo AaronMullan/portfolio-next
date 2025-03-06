@@ -28,10 +28,8 @@ export function ContentBlock({
   return (
     <div
       ref={ref}
-      className={`bg-lightgray border-darkgray mb-16 flex w-full rounded-lg ${
-        reverse
-          ? "shadow-lightgray flex-row-reverse"
-          : "shadow-lightgray flex-row"
+      className={`bg-lightgray border-darkgray shadow-lightgray mb-16 flex w-full flex-col rounded-lg ${
+        reverse ? "lg:flex-row-reverse" : "lg:flex-row"
       } ${inView ? animationValue : "opacity-0"} transition-all duration-700 ease-out`}
     >
       <Image
@@ -39,9 +37,11 @@ export function ContentBlock({
         alt={title}
         width={400}
         height={400}
-        className={`h-[25rem] ${reverse ? "rounded-r-lg" : "rounded-l-lg"}`}
+        className={`h-[30rem] w-full object-cover object-bottom sm:h-[35rem] md:h-[30rem] ${
+          reverse ? "rounded-r-lg" : "rounded-l-lg"
+        }`}
       />
-      <div className="h-full w-full p-4">
+      <div className="h-auto w-full p-4">
         <a href={url} target="_blank" rel="noreferrer">
           <h3 className="hover:text-red text-green mb-4 text-3xl underline">
             {title}

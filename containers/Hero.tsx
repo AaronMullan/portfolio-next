@@ -2,7 +2,9 @@ import { Container } from "@/components/Container";
 
 export function Hero() {
   return (
-    <section className="from-lightgray to-darkgray animate-fadeIn flex h-full w-full flex-col items-center justify-center bg-linear-to-b">
+    <section
+      className={`animate-fadeIn-slow flex h-full w-full flex-col items-center justify-center`}
+    >
       <Container>
         <div className="flex w-full flex-col py-20 md:grid md:grid-cols-[1fr_2fr]">
           <div className="flex flex-col">
