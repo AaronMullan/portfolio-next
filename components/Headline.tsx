@@ -22,7 +22,7 @@ export function Headline({
   return (
     <div
       ref={ref}
-      className={`mb-8 opacity-0 transition-opacity duration-700 ease-out ${
+      className={`mx-2 mb-8 opacity-0 transition-opacity duration-700 ease-out lg:mx-0 ${
         inView ? "animate-fadeIn opacity-100" : ""
       }`}
     >

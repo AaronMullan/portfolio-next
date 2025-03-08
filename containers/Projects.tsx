@@ -4,13 +4,9 @@ import { Headline } from "../components/Headline";
 
 export function Projects() {
   return (
-    <section className="border-primary h-full w-full border-2 p-4">
+    <section className="mt-16 h-full w-full">
       <Container>
-        <Headline
-          title="Projects"
-          subtitle="Here are some of the projects I've worked on."
-          textColor="cyan"
-        />
+        <Headline title="Projects" textColor="cyan" />
         <Cardgrid />
       </Container>
     </section>

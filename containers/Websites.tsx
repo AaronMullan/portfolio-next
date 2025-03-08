@@ -5,7 +5,7 @@ import { websitesData, sprinklrWebsitesData } from "@/data/websitesData";
 
 export function Websites() {
   return (
-    <section className="h-full w-full bg-white py-16">
+    <section className="h-full w-full bg-white lg:py-16">
       <Container>
         <Headline
           title="Lead Software Engineer"
@@ -13,12 +13,15 @@ export function Websites() {
         />
         {websitesData.map((website) => (
           <ContentBlock
-            key={website?.title}
-            image={website?.image}
-            title={website?.title}
-            description={website?.description}
-            reverse={website?.reverse}
-            url={website?.url}
+            key={website.title}
+            image={website.image}
+            title={website.title}
+            subtitle={website.subtitle}
+            problem={website.problem}
+            solution={website.solution}
+            result={website.result}
+            reverse={website.reverse}
+            url={website.url}
           />
         ))}
         <Headline
@@ -27,12 +30,15 @@ export function Websites() {
         />
         {sprinklrWebsitesData.map((website) => (
           <ContentBlock
-            key={website?.title}
-            image={website?.image}
-            title={website?.title}
-            description={website?.description}
-            reverse={website?.reverse}
-            url={website?.url}
+            key={website.title}
+            image={website.image}
+            title={website.title}
+            subtitle={website.subtitle}
+            problem={website.problem}
+            solution={website.solution}
+            result={website.result}
+            reverse={website.reverse}
+            url={website.url}
           />
         ))}
       </Container>

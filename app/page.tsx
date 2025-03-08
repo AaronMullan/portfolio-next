@@ -9,13 +9,14 @@ export default function Home() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-items-center">
       <main className="mb-8 flex w-full flex-col items-center">
-        <div className="animated-gradient h-full w-full">
+        <div className="hero-gradient h-full w-full">
           <Hero />
           <About />
         </div>
-        <Logos />
+        <Logos className="hidden lg:flex" />
         <Websites />
         <Projects />
+        <Logos className="flex lg:hidden" />
       </main>
       <Footer />
     </div>

@@ -2,8 +2,8 @@
 
 /* --------------- Theme Settings --------------- */
 @theme {
-  --color-background: #ffffff;
-  --color-foreground: #272822;
+  --color-background: #272822;
+  --color-foreground: #ffffff;
   --color-blue: #007ace;
   --color-green: #a6e22e;
   --color-red: #f92672;
@@ -14,23 +14,17 @@
   --color-black: #000000;
   --color-lightgray: #3e3d32;
   --color-darkgray: #272822;
+
+  /* Shadows */
   --shadow-lightgray: 0 4px 10px var(--color-lightgray);
   --shadow-cyan: 0 4px 10px var(--color-cyan);
   --shadow-green: 0 4px 10px var(--color-green);
 
-  /* Set fallback fonts */
+  /* Fonts */
   --font-sans:
     var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-mono: var(--font-mono), Consolas, "Liberation Mono", Menlo, monospace;
-}
-
-/* Dark Mode Override */
-@media (prefers-color-scheme: dark) {
-  @theme {
-    --color-background: #272822;
-    --color-foreground: #ffffff;
-  }
 }
 
 /* --------------- Global Styles --------------- */
@@ -41,22 +35,21 @@ body {
   overflow-x: hidden;
 }
 
-/* About Gradient */
+/* Gradient Background */
 .about-gradient {
-  background: rgb(255, 255, 255);
   background: linear-gradient(
     var(--color-darkgray) 54%,
     var(--color-lightgray) 100%
   );
 }
 
-/* --------------- Keyframes & Animations --------------- */
+/* --------------- Animations --------------- */
 @keyframes moveUp {
   from {
-    transform: translateY(50vh); /* Start from 50vh below */
+    transform: translateY(50vh);
   }
   to {
-    transform: translateY(0); /* Move to its final position */
+    transform: translateY(0);
   }
 }
 
@@ -67,14 +60,6 @@ body {
   to {
     opacity: 1;
   }
-}
-
-.animate-fadeIn {
-  animation: fadeIn 0.8s ease-out forwards;
-}
-
-.animate-moveUp {
-  animation: moveUp 0.8s ease-out forwards;
 }
 
 @keyframes slideInLeft {
@@ -114,15 +99,14 @@ body {
   }
 }
 
-/* --------------- Utilities --------------- */
+/* --------------- Utility Classes --------------- */
 @layer utilities {
   .animate-fadeIn {
     animation: fadeIn 0.8s ease-out forwards;
   }
 
   .animate-fadeIn-slow {
-    animation: fadeIn 0.8s ease-out forwards;
-    animation-delay: 0.2s;
+    animation: fadeIn 0.8s ease-out 0.2s forwards;
   }
 
   .animate-slideInLeft {
@@ -134,18 +118,7 @@ body {
   }
 
   .animated {
-    will-change: opacity, transform; /* Optimize for animations */
-  }
-
-  .animated-gradient {
-    background:
-      radial-gradient(
-        100% 100% at var(--g5-1-x-position) var(--g5-1-y-position),
-        var(--color-lightgray) -52%,
-        transparent
-      ),
-      var(--color-darkgray);
-    animation: gradientShift 10s ease-in-out infinite alternate;
+    will-change: opacity, transform;
   }
 }
 

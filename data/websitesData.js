@@ -1,70 +1,65 @@
 export const websitesData = [
   {
-    title: "curately.co",
+    title: "Curately",
+    subtitle: "Walled Garden Marketplace",
     url: "https://curately.co",
-    description: (
-      <div className="flex flex-col justify-between">
-        <p className="mb-4">
-          <strong className="text-red">Problem:</strong> A Denver-based PR
-          agency wanted to monetize its role as a matchmaker between clients and
-          service providers (photographers, videographers, etc.). The goal was
-          to build a curated marketplace where clients could find, hire,
-          communicate with, and pay providers—all within a single platform that
-          takes a fee.
-        </p>
-        <p className="mb-4">
-          <strong className="text-blue">Solution:</strong> Collaborating with
-          the business and design teams, we built a Next.js app using the shadcn
-          component library, with Strapi as the backend. We integrated Clerk for
-          authentication, Stripe for payments, Mailchimp for transactional
-          emails, Algolia for search, and Stream for chat.
-        </p>
-        <p className="mb-4">
-          <strong className="text-green">Result:</strong> The client received a
-          polished, fully functional freelancer marketplace, now being populated
-          with Denver-area creatives.
-        </p>
-      </div>
-    ),
+    problem:
+      "A Denver-based PR agency wanted to monetize its role as a matchmaker between clients and service providers. They needed a platform where clients could easily find, hire, communicate with, and pay providers, all within a single system that takes a fee.",
+
+    solution:
+      "We built a Next.js app with the shadcn component library, using Strapi as the backend to manage listings and transactions. Integrated Clerk for authentication, Stripe for payments, Mailchimp for emails, Algolia for search, and Stream for real-time chat.",
+
+    result:
+      "The polished marketplace is now live, offering a seamless experience for clients and providers. It's being populated with Denver-area creatives and is set up for future growth.",
     image: "/curately.png",
     reverse: false,
   },
   {
-    title: "Google",
-    url: "https://google.com",
-    description: "Search engine",
+    title: "First Place Supply",
+    subtitle: "Headless eCommerce",
+    url: "https://firstplacesupply.com",
+    problem:
+      "Avalore Agency's clients on BigCommerce struggled with slow load times, limited customization, and integration challenges. They required a more flexible, high-performance solution that could scale with their growing needs, improve user engagement, and streamline the overall experience.",
+
+    solution:
+      "We developed a headless eCommerce architecture using Next.js for a dynamic, high-speed front-end, Strapi as a flexible CMS, and Algolia for instant, intelligent search functionality. BigCommerce continued to serve as the backend, handling product management, inventory, and transactions seamlessly.",
+
+    result:
+      "The redesigned storefront significantly improved page speed, SEO rankings, and user experience. Clients gained full creative control over the design, enhanced third-party integrations, and a future-proof platform ready for expansion.",
+    image: "/first-place-supply.png",
     reverse: true,
   },
+  {
+    title: "Distributor Wire & Cable",
+    subtitle: "Epic Refactor",
+    url: "https://www.distributorwire.com/",
+    problem:
+      "DWC wanted to offer customers an online portal for quick product quotes, integrating with Acumatica. When the Acumatica API couldn't handle the traffic, a Firebase database was used as a workaround. The resulting codebase was fragile and messy, with redundant logic. One file had 6,000 lines containing 20 misnamed functions.",
+
+    solution:
+      "I broke the code out into individual function files, and the logic into shared utilities.  I moved the data source to a Snowflake mirror of Acumatica, allowing for more stability in data fetching, using SQL queries to replace difficult-to read, long REST query params. Overall the codebase got a much-needed glow up.",
+
+    result:
+      "The site became more stable and maintainable, allowing us to respond to business needs and  implement new features efficiently and with fewer issues.",
+    image: "/dwc.png",
+    reverse: false,
+  },
 ];
+
 export const sprinklrWebsitesData = [
   {
-    title: "sprinklr.com",
-    description: (
-      <div className="flex flex-col justify-between">
-        <p className="mb-4">
-          <strong className="text-red">Problem:</strong> Sprinklr, a leading
-          enterprise software company, needed to enhance its Gatsby-powered
-          marketing website with new features and multilingual support to better
-          serve its global audience.
-        </p>
-        <p className="mb-4">
-          <strong className="text-blue">Solution:</strong> As part of the
-          development team, I helped expand the site's capabilities by building
-          a blog, a news page, and new components, all integrated with the
-          Contentful CMS. We implemented i18next for seamless multilingual
-          translations and integrated HubSpot forms to optimize lead capture.
-        </p>
-        <p className="mb-4">
-          <strong className="text-green">Result:</strong> Collaborating closely
-          with the design and marketing technology teams, we successfully
-          delivered a more dynamic and accessible website. Our improvements
-          boosted Ahrefs and Google PageSpeed scores significantly while
-          increasing sales leads.
-        </p>
-      </div>
-    ),
-    image: "/sprinklr.png",
+    title: "Sprinklr",
+    subtitle: "Enterprise Marketing Site",
     url: "https://sprinklr.com",
-    reverse: false,
+    problem:
+      "Sprinklr, a leading enterprise software company, needed to enhance their Gatsby-powered marketing website with new features and multilingual support to better serve their global audience. The existing platform lacked flexibility and scalability to meet evolving needs.",
+
+    solution:
+      "I worked as part of the development team to build a blog, news page, and new components integrated with Contentful CMS. We used i18next for multilingual translations and integrated HubSpot forms to streamline lead capture across regions.",
+
+    result:
+      "Collaborating with design and marketing teams, we delivered a dynamic, accessible website that improved performance, boosting Ahrefs and Google PageSpeed scores. These improvements led to a significant increase in sales leads and user engagement.",
+    image: "/sprinklr.png",
+    reverse: true,
   },
 ];

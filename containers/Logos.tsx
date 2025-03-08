@@ -1,6 +1,5 @@
 import { LogoBar } from "../components/LogoBar";
 import { Container } from "../components/Container";
-import { Headline } from "@/components/Headline";
 
 const coreLogos = [
   "/logos/node.svg",
@@ -19,9 +18,13 @@ const coreLogos = [
 ];
 const integrationLogos = [];
 
-export function Logos() {
+interface LogosProps {
+  className?: string;
+}
+
+export function Logos({ className }: LogosProps) {
   return (
-    <div className="w-full bg-white pt-16">
+    <div className={`w-full bg-white pt-16 ${className}`}>
       <Container>
         <LogoBar logos={coreLogos} />
       </Container>
