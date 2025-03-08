@@ -6,7 +6,7 @@ export function Hero() {
       <section
         className={`animate-fadeIn-slow relative flex h-full w-full flex-col items-center justify-center`}
       >
-        <div className="absolute inset-0 bg-[url('/at-computer.jpg')] bg-cover bg-center opacity-20 grayscale-100 saturate-0 filter"></div>
+        <div className="absolute inset-0 bg-[url('/at-mixer.jpg')] bg-cover bg-center opacity-20 grayscale-100 saturate-0 filter"></div>
         <Container>
           <div className="flex w-full flex-col py-20 md:grid-cols-[1fr_2fr] lg:grid">
             <div className="hidden flex-col opacity-100 lg:flex">
