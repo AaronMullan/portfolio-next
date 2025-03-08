@@ -21,7 +21,7 @@ export function About() {
             products. As a Developer, I work closely with the business and
             design teams to scope projects and select technologies. In a
             leadership role I establish code patterns, plan development sprints,
-            and assign tasks.
+            assign tasks, and mentor junior Developers.
           </p>
           <p>
             At it's best, creating software or music exists where I thrive: at
