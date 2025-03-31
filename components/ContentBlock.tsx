@@ -47,7 +47,7 @@ export function ContentBlock({
           reverse ? "lg:rounded-r-lg" : "lg:rounded-l-lg"
         }`}
       />
-      <div className="flex h-full w-full flex-col justify-center p-4">
+      <div className="flex h-full w-full flex-col justify-center p-6">
         <a href={url} target="_blank" rel="noreferrer">
           <h3 className="hover:text-red text-green mb-1 text-3xl underline">
             {title}
