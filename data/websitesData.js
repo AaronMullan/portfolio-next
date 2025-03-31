@@ -1,8 +1,8 @@
 export const websitesData = [
   {
-    title: "Curately",
+    title: "Frameflow",
     subtitle: "Walled Garden Marketplace",
-    url: "https://curately.co",
+    url: "https://frameflow.co/",
     problem:
       "A Denver-based PR agency wanted to monetize its role as a matchmaker between clients and service providers. They needed a platform where clients could easily find, hire, communicate with, and pay providers, all within a single system that takes a fee.",
 
@@ -11,7 +11,7 @@ export const websitesData = [
 
     result:
       "The polished marketplace is now live, offering a seamless experience for clients and providers. It's being populated with Denver-area creatives and is set up for future growth.",
-    image: "/curately.png",
+    image: "/frameflow.png",
     reverse: false,
   },
   {
