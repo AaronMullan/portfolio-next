@@ -16,8 +16,6 @@ const coreLogos = [
   "/logos/mailchimp.svg",
   "/logos/strapi.svg",
 ];
-const integrationLogos = [];
-
 interface LogosProps {
   className?: string;
 }
