@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     siteName: "Aaron Mullan Portfolio",
     images: [
       {
-        url: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630'><rect width='1200' height='630' fill='%231a1a1a'/><text x='50%' y='50%' font-size='300' text-anchor='middle' dominant-baseline='middle' fill='white'>👨‍🎤</text></svg>",
+        url: "/aaronmullandotcom-screenshot.png",
         width: 1200,
         height: 630,
         alt: "Aaron Mullan - Full Stack Developer",
@@ -28,10 +28,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Aaron Mullan - Full Stack Developer",
     description:
-      "Full Stack Software Developer with a Front End focus. Former Audio Engineer turned developer, passionate about creating excellent products.",
-    images: [
-      "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630'><rect width='1200' height='630' fill='%231a1a1a'/><text x='50%' y='50%' font-size='300' text-anchor='middle' dominant-baseline='middle' fill='white'>👨‍🎤</text></svg>",
-    ],
+      "Full Stack Software Developer with a Front End focus. Audio Engineer turned developer, passionate about creating excellent products.",
+    images: ["/aaronmullandotcom-screenshot.png"],
   },
 };
 
