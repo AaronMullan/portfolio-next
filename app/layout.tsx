@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title: "Aaron Mullan - Full Stack Developer",
     description:
       "Full Stack Software Developer with a Front End focus. Audio Engineer turned developer, passionate about creating excellent products.",
-    images: ["/aaronmullandotcom-screenshot.png"],
+    images: ["/aaronmullandotcom-cropped.png"],
   },
 };
 
