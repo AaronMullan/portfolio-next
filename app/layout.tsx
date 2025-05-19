@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     siteName: "Aaron Mullan Portfolio",
     images: [
       {
-        url: "/aaronmullandotcom-screenshot.png",
+        url: "/aaronmullandotcom-cropped.png",
         width: 1200,
         height: 630,
         alt: "Aaron Mullan - Full Stack Developer",
